@@ -1,0 +1,47 @@
+#:schema https://json.schemastore.org/rustfmt.json
+
+edition = "2021"
+unstable_features = true
+
+# NOTE: Below the each setting a comment is a rationale as to why we're adjusting or explicitly set them.
+
+# Long chains should be wrapped for improving code readability
+chain_width = 30
+# Easier to understand
+condense_wildcard_suffixes = true
+# For the accessibility reasoning
+hard_tabs = true
+# It's easier to see how the crate is structured
+imports_granularity = "Crate"
+# Mixing vertical and horizontal is ok
+imports_layout = "Mixed"
+# Code readability
+force_multiline_blocks = true
+# Code readability
+format_code_in_doc_comments = true
+# Also easier to read the long strings which exceed the `max_width`
+format_strings = true
+# Make it explicit
+max_width = 100
+# We are Linux users, ok?!
+newline_style = "Unix"
+# Makes it easier for code-readability
+reorder_impl_items = true
+# Alphabetical order makes it easier to find the crate by name
+reorder_imports = true
+# Easier to convert into documentation comments
+normalize_comments = true
+# Easier to convert into normal (non-documentation) comments
+normalize_doc_attributes = true
+# Spaces around the matches are confusing
+format_macro_matchers = true
+# Easier to update code in scopes
+single_line_if_else_max_width = 0
+# Make it explicit
+tab_spaces = 4
+# Make it less verbose, and easier to read
+use_field_init_shorthand = true
+# Adding `?` at the end is more preferred than `try!`
+use_try_shorthand = true
+# Easier to read the code, when we have `max_width` set
+wrap_comments = true

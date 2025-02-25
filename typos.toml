@@ -1,0 +1,12 @@
+# https://github.com/crate-ci/typos/blob/master/docs/reference.md#configuration
+
+[default.extend-identifiers]
+HSI = "HSI"
+Ot = "Ot"
+hsi = "hsi"
+ot = "ot"
+ratatui = "ratatui"
+ser = "ser"
+
+[default]
+extend-ignore-identifiers-re = ["datatime", "irectory"]

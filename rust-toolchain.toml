@@ -1,0 +1,35 @@
+#:schema https://json.schemastore.org/rust-toolchain.json
+
+[toolchain]
+channel = "nightly-2025-01-01"
+# https://rust-lang.github.io/rustup/concepts/components.html
+components = [
+	"cargo",
+	"clippy",
+	"miri",
+	"rust-analyzer",
+	"rust-docs",
+	"rust-src",      # for rust-analyzer
+	"rustc",
+	"rustfmt",
+]
+targets = [
+	# 64bits Linux Desktop
+	"x86_64-unknown-linux-gnu",
+	# Web Assembly
+	"wasm32-unknown-unknown",
+	# 64bits RPI4
+	"aarch64-unknown-linux-gnu",
+	# 32bits RPI4
+
+	# For STM32
+	"thumbv7em-none-eabihf",
+	# For ESP32-C3
+	"riscv32imc-unknown-none-elf",
+	# MOXA 32bits ARMV7l (Don't use this if the GLIC of target is too old)
+	"armv7-unknown-linux-gnueabihf",
+	# MOXA 32bits ARMV7l - static link (do not depend on GLIC version of target)
+	"armv7-unknown-linux-musleabihf",
+	# AARCH64 - static link (do not depend on GLIC version of target)
+	"aarch64-unknown-linux-musl",
+]
